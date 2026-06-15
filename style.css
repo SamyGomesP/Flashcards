@@ -1,0 +1,223 @@
+* {
+			padding: 0;
+			margin: 0;
+			
+			}
+		body {
+			position: relative;
+			background: aliceblue;
+			}
+		#more {
+			position: fixed;
+			bottom: 5vh;
+			right: 3vh;
+			padding: 1rem;
+			border-radius: 20px;
+			}
+			
+		.barraDePesquisa {
+			display: flex;
+			justify-content: center;
+			margin: auto;
+			width: fit-content;
+			border: 1px solid rgba(0,0,0,0.4);
+			border-radius: 15px;
+			overflow: hidden;
+			height: 2.6rem;
+			
+			
+			.search {
+				all: unset;
+				padding: 5px;
+				
+				&:focus {
+					outline: 0;
+					background: inherit;
+					border: none;
+				}	
+			
+			}
+			button {
+				background: inherit;
+				border-left: 1px solid rgba(0,0,0,0.4);
+				
+		}
+			.pesquisar {
+			width: 15%;	
+			padding: 5px;
+			}
+	}
+		.box-cards {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+			flex-wrap: wrap;
+			gap: 2rem;
+			margin-top: 2rem;
+			perspective: 500px;
+		
+			}
+		.frente, .verso {
+			position: absolute;
+			inset: 0;
+			backface-visibility: hidden;
+			}
+		
+		.frente {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2.2rem;
+		font-weight: 600;
+		}
+			
+		.verso {
+		transform: rotateY(180deg);
+		background: #8EE952;
+		box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+		border-radius: 30px;
+		padding: 12px;
+		text-align: justify;
+		font-size: 1.6rem;
+		}
+		
+
+			
+		.cards {
+			position: fixed;
+			top: 10vh;
+			box-shadow: 0px 5px 10px rgba(0,0,0,0.2), inset 0px 1px 3px rgba(0,0,0,0.2);
+			z-index: 20;
+			width: 60vw; height: 400px;
+			background: pink;
+			margin: 0 auto;
+			border-radius: 40px;
+			
+		}
+		.box-opcoes {
+			position: absolute;
+			top: 8px;
+			right: 12px;
+			display: flex;
+			gap: 8px;
+			opacity: 0;          /* escondido por padrão */
+			transition: opacity 0.2s ease;
+		}
+
+		/* aparece quando passa o mouse no card */
+		.card:hover .box-opcoes {
+			opacity: 1;
+		}
+
+		.btn-opcao {
+			background: rgba(255,255,255,0.7);
+			border: none;
+			border-radius: 50%;
+			width: 32px;
+			height: 32px;
+			cursor: pointer;
+			font-size: 0.85rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			backdrop-filter: blur(4px);
+		}
+
+		.btn-opcao:hover {
+			background: white;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+		}
+		
+		#titulo {
+			border: none;
+			border-bottom: 1px solid white;
+			width: 100%;
+			height: 2.8rem;
+			text-align: center;
+			background: inherit;
+			border-radius: 40px 40px 0 0;
+			font-size: 1.6rem;
+			font-weight: 500;
+			padding: 1.4rem;
+			
+			&:focus {
+					outline: none;	
+			
+				}
+			}
+					
+			.textarea {
+				all: unset;
+				overflow-wrap: break-word;
+				word-break: break-all;
+			
+				rezise: none;
+				width: 90%;
+				font-size: 1.4rem;
+				font-weight: 500;
+				padding: 15px;
+				letter-spacing: 0.1rem;
+				
+				
+			}
+			.box-botoes {
+				position: absolute;
+				bottom: -10vh;
+				width: 100%;
+				
+			}
+			.botoes {
+				display: flex;
+				justify-content: space-around;
+			}
+			
+			
+			.add-cards {
+				padding: 10px;
+				font-weight: 600;
+				font-size: 1.2rem;
+				border-radius: 20px;
+				letter-spacing: 0.2rem;
+				background: aliceblue;
+				}
+				
+			.card {
+				position: relative;
+				box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+				border-radius: 30px;
+				background: aliceblue;
+				padding: 12px;
+				width: 80vw;
+				height: 30vh;
+				transition: transform 0.5s ease;
+				transform-style: preserve-3d;				
+			}
+			.rodar  {
+			transform: rotateY(180deg);
+		}
+		
+@media screen and (min-width: 700px) {
+	.box-cards {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			
+			flex-wrap: wrap;
+			gap: 2rem;
+			margin-top: 2rem;
+			perspective: 500px;
+		
+			}
+	.card {
+				position: relative;
+				box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+				border-radius: 30px;
+				background: aliceblue;
+				padding: 12px;
+				max-width: 360px;
+				transition: transform 0.5s ease;
+				transform-style: preserve-3d;				
+			}
+	
+}
