@@ -13,8 +13,18 @@
 			right: 3vh;
 			padding: 1rem;
 			border-radius: 20px;
+			border: 1px solid rgba(0,0,0, 0.3);
+			background: lightblue;
+			
+				&:active {
+				box-shadow: inset 0px 0px 3px rgba(0,0,0,0.3);
+				}
 			}
 			
+		h1 {
+			font-size: 2rem;
+			font-weight: 600;
+		}	
 		.barraDePesquisa {
 			display: flex;
 			justify-content: center;
@@ -38,20 +48,25 @@
 			
 			}
 			button {
-				background: inherit;
-				border-left: 1px solid rgba(0,0,0,0.4);
+				background: lightblue;
+				border: none;
+				border-left: 1px solid rgba(0,0,0,0.4
+				);
 				
 		}
 			.pesquisar {
 			width: 15%;	
 			padding: 5px;
+			
+			&:active {
+				box-shadow: inset 0px 0px 3px rgba(0,0,0,0.3);
+				}
 			}
 	}
 		.box-cards {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			
+			align-items: center;			
 			flex-wrap: wrap;
 			gap: 2rem;
 			margin-top: 2rem;
@@ -93,6 +108,7 @@
 			background: pink;
 			margin: 0 auto;
 			border-radius: 40px;
+			
 			
 		}
 		.box-opcoes {
@@ -154,7 +170,7 @@
 			
 				rezise: none;
 				width: 90%;
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 				font-weight: 500;
 				padding: 15px;
 				letter-spacing: 0.1rem;
@@ -170,6 +186,11 @@
 			.botoes {
 				display: flex;
 				justify-content: space-around;
+				
+				button {
+				border: 1px solid rgba(0,0,0, 0.3);
+				background: lightblue;
+				}
 			}
 			
 			
